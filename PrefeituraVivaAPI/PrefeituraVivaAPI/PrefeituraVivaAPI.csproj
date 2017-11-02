@@ -87,15 +87,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco\BD.cs" />
+    <Compile Include="Controllers\InformacaoController.cs" />
+    <Compile Include="Controllers\PresencaController.cs" />
+    <Compile Include="Controllers\ReunioesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VotosController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Informacao.cs" />
+    <Compile Include="Models\Presenca.cs" />
+    <Compile Include="Models\Reuniao.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Controllers\VotacaoController.cs" />
+    <Compile Include="Models\Votacao.cs" />
+    <Compile Include="Models\Voto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

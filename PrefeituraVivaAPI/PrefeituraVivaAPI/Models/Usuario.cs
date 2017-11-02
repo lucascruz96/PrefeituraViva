@@ -12,7 +12,7 @@ namespace PrefeituraVivaAPI.Models
         public string Senha { get; set; }
         public string Cpf { get; set; }
         public int Idade { get; set; }
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
         public string Email { get; set; }
     }
 }
