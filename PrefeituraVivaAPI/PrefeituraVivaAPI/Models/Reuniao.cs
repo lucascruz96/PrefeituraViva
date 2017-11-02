@@ -11,7 +11,6 @@ namespace PrefeituraVivaAPI.Models
         public string Endereco { get; set; }
         public string Tema { get; set; }
         public string Texto { get; set; }
-        public int Ativo { get; set; }
         public DateTime Horario { get; set; }
         public List<int> presentes = new List<int>();
     }
