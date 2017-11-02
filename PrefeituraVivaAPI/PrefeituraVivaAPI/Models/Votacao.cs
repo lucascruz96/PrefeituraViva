@@ -10,6 +10,6 @@ namespace PrefeituraVivaAPI.Models
         public int Id_vota { get; set; }
         public string Assunto { get; set; }
         public string Texto { get; set; }
-        public static List<Voto> votos = new List<Voto>();
+        public List<Voto> Votos = new List<Voto>();
     }
 }

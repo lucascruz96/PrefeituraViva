@@ -13,6 +13,6 @@ namespace PrefeituraVivaAPI.Models
         public string Texto { get; set; }
         public int Ativo { get; set; }
         public DateTime Horario { get; set; }
-        public static List<Usuario> presentes = new List<Usuario>();
+        public List<int> presentes = new List<int>();
     }
 }
