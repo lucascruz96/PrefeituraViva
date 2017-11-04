@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Top Navigation</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style>
+      .descricao-in-modal {
+        font-size: 20px;
+        /* margin-top: 20px;
+          margin-bottom: 10px; */
+        margin-left: 10px;
+        color: rgb(100, 100, 100);
+      }
+    </style>
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><b>Prefeitura </b>Viva</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Calendário Reuniões
+        </h1>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#">
+              <i class="fa fa-home"></i> Página Inicial</a>
+          </li>
+          <li class="active">Calendário</li>
+        </ol>
+      </section>
+
+      <section class="content" id="calendario-content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box success">
+              <div class="box-header with-border">
+                <h3 class="box-title">Discussão Problema Falta de Luz em Postes</h3>
+              </div>
+              <div class="box-body">
+                <div class="localizacao-calendario">
+                  <strong>Localização:</strong>
+                  Rua Lorem Ipsum Dolores, Barreiro - Belo Horizonte, MG
+                </div>
+                <div class="detalhes-resumo-calendario">
+                  <strong>Detalhes:</strong>
+                  Reunião para ser discutido problemas com postes de luz e etc....
+                </div>
+              </div>
+              <div class="box-footer">
+                <div class="pull-right">
+                  <button class="btn btn-flat btn-info btn-sm btn-detalhes-calendario" onclick="verDetalhesCalendario(123)">
+                    Ver detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box xob success">
+              <div class="box-header with-border">
+                <h3 class="box-title">Discussão Problema Falta de Luz em Postes</h3>
+              </div>
+              <div class="box-body">
+                <div class="localizacao-calendario">
+                  <strong>Localização:</strong>
+                  Rua Lorem Ipsum Dolores, Barreiro - Belo Horizonte, MG
+                </div>
+                <div class="detalhes-resumo-calendario">
+                  <strong>Detalhes:</strong>
+                  Reunião para ser discutido problemas com postes de luz e etc....
+                </div>
+              </div>
+              <div class="box-footer">
+                <div class="pull-right">
+                  <button class="btn btn-flat btn-info btn-sm btn-detalhes-calendario" onclick="verDetalhesCalendario()">
+                    Ver detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+
+    </div>
+    <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 2.4.0
+      </div>
+      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+      reserved.
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+ <!-- #modal-reunioes -->
+ <div class="modal fade" id="modal-calendario" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title">asd</h4>
+        </div>
+        <div class="modal-body">
+          <h3 class="">Endereço</h3>
+          <div class="descricao-in-modal" id="descricao-in-modal-Endereco">CConteudo</div>
+          <h3>Tema</h3>
+          <div class="descricao-in-modal" id="descricao-in-modal-Tema">CConteudo</div>
+          <h3>Texto</h3>
+          <div class="descricao-in-modal" id="descricao-in-modal-Texto">CConteudo</div>
+          <h3>Ativo</h3>
+          <div class="descricao-in-modal" id="descricao-in-modal-Ativo">CConteudo</div>
+          <h3>Horario</h3>
+          <div class="descricao-in-modal" id="descricao-in-modal-Horario">CConteudo</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Voltar</button>
+
+          <button type="button" class="btn btn-danger">Não Vou Ir!</button>
+
+          <button type="button" class="btn btn-primary">Vou Ir!</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
+  <div class="modal fade" id="modal-cadastro-reunioes" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title">Cadastrar Reunião <small class="text-danger">* Campos de preenchimento obrigatório</small></h4>
+        </div>
+        <div class="modal-body">
+          <form id="form-cadastrar-reuniao" role="form">
+            <div class="box-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Endereço</label>
+                <input required type="text" class="form-control" id="Endereco" name="Endereco" maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Tema</label>
+                <input required type="text" class="form-control" id="Tema" name="Tema" maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Horário</label>
+                <input required type="text" class="date form-control" id="Horario" name="Horario" >
+              </div>
+            </div>
+            <!-- /.box-body -->
+
+            <div class="box-footer">
+              <button type="submit" class="btn btn-primary" onsubmit="return false;">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Voltar</button>
+
+          <button type="button" class="btn btn-danger">Não Vou Ir!</button>
+
+          <button type="button" class="btn btn-primary">Vou Ir!</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+<!-- Mask Plugin -->
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+
+
+  <!-- Sweet Alert -->
+  <!-- <script src="assets/bootstrap-sweetalert-1.0.1/dist/sweetalert.min.js"></script> -->
+
+<script>
+  var AjaxReq = function(uri, method, data, f_succcess, f_error) {
+    var request = {
+        url: uri,
+        type: method,
+        contentType: "application/json",
+        accepts: "application/json",
+        cache: false,
+        dataType: 'json',
+        data: JSON.stringify(data),
+        beforeSend: function (xhr) {
+        },
+        error: function(jqXHR) {
+            if ($.isFunction(f_error))
+            f_error();
+        },
+        success: function() {
+            if ($.isFunction(f_success)) {
+                f_success();
+            }
+        }
+    };
+    return $.ajax(request);
+};
+
+
+var ReuniaoController = {
+    url: 'xxx',
+    listar: function() {
+
+    },
+    cadastrar: function(data) {
+        AjaxReq(ReuniaoController.url, 'POST', data,  function() {
+            swal('Feito!', 'Dados cadastrados com sucesse', 'success');
+            $('.modal').modal('hide');
+        });
+    },
+    excluir: function() {
+
+    }
+};  
+
+var reunioes = {};
+
+reunioes.i123 = {
+    Id_Reuniao: 123,
+    Endereco: 'pucminas barreiro',
+    Tema: 'Infraestrutura Pública',
+    Texto: 'Excesso de buracos nos asfaltos da região',
+    Ativo: 'sim',
+    Horario: '2017-10-04 11:30:00'
+};
+
+reunioes.i987 = {
+    Id_Reuniao: 987,
+    Endereco: 'pucminas barreiro',
+    Tema: 'Poste sem luz',
+    Texto: 'Excesso de buracos nos asfaltos da região',
+    Ativo: 'sim',
+    Horario: '2017-10-04 11:30:00'
+};
+
+reunioes.i467 = {
+    Id_Reuniao: 467,
+    Endereco: 'Mineirão',
+    Tema: 'Banheiros Sujos',
+    Texto: 'Banheiros masculinos e femininos estão sempre sujos',
+    Ativo: 'sim',
+    Horario: '2017-10-04 11:30:00'
+};
+
+reunioes.i469 = {
+    Id_Reuniao: 469,
+    Endereco: 'Exmpominas',
+    Tema: 'Internet Não Funcionou',
+    Texto: 'A internet não funcionou bem durante o desenvolvimento do trabalho',
+    Ativo: 'sim',
+    Horario: '2017-10-04 11:30:00'
+};
+
+function verDetalhesCalendario(id) 
+{
+    reuniaoId = 'i'.concat(id);
+
+    reuniao = reunioes[reuniaoId];
+
+    exibirModalCalendario(reuniao);
+}
+
+function exibirModalCalendario(reuniao)
+{
+    var modal = $("#modal-calendario");
+
+    modal.find('.modal-title').html(reuniao.Tema);
+
+    $.each(reuniao, function(key, value) {
+        $("#descricao-in-modal-" + key).html(value);
+    });
+
+    modal.modal('show');
+};
+
+$(function() {
+    function exibirReunioes(reunioes) {
+        var content = '';
+        $.each(reunioes, function (i, reuniao) {
+
+                    content += '<div class="col-xs-4">';
+                    content += '  <div class="box success">';
+                    content += '    <div class="box-header with-border">';
+                    content += '      <h3 class="box-title">'+  reuniao.Tema+'</h3>';
+                    content += '    </div>';
+                    content += '    <div class="box-body">';
+                    content += '      <div class="localizacao-calendario">';
+                    content += '        <strong>Localização:</strong>';
+                    content += ' ' + reuniao.Endereco;
+                    content += '      </div>';
+                    content += '      <div class="detalhes-resumo-calendario">';
+                    content += '        <strong>Detalhes:</strong>';
+                    content += ' ' + reuniao.Tema;
+                    content += '      </div>';
+                    content += '    </div>';
+                    content += '    <div class="box-footer">';
+                    content += '      <div class="pull-right">';
+                    content += '        <button class="btn btn-flat btn-info btn-sm btn-detalhes-calendario" onclick="verDetalhesCalendario('+ reuniao.Id_Reuniao +')">';
+                    content += '          Ver detalhes';
+                    content += '        </button>';
+                    content += '      </div>';
+                    content += '    </div>';
+                    content += '  </div>';
+                    content += '</div>';
+                });
+            
+                // content += '<div style="position: fixed; right: 11px; bottom: 11px" id="cadastrar-reuniao" class="">';
+                // content += '<div class="btn btn-success btn-lg">Cadastrar Nova Reunião</div>';
+                // content += '</div>';
+                $("#calendario-content").html(content);
+    }
+
+    exibirReunioes(reunioes);
+
+    // $.get('http://prefeituraviva.azurewebsites.net/reunioes', function(data) {
+        
+    //     // reunioes = {};
+
+    //     $.each(data, function (i, value) {
+    //         reuniao['i' + value.Id_Reuniao] = value;
+    //     });
+
+    //     exibirReunioes(reunioes);
+
+    // }, 'json');    
+
+    $("#cadastrar-reuniao").click(function(){
+        var modal = $("#modal-cadastro-reunioes");
+
+        modal.modal('show');
+
+        $("#form-cadastrar-reuniao").off('submit').submit(function(e) {
+            e.preventDefault();
+            var form = $(this);
+
+            var data = form.serialize();
+
+            data.Horario = moment(data.Horario, 'DD/MM/YYYY HH:MM').format('YYYY-MM-DD HH:MM');
+
+            ReuniaoController.cadastrar(form.serialize());
+        });
+    });
+
+
+    $('.date').mask('00/00/0000');
+    $('.time').mask('00:00:00');
+    $('.date_time').mask('00/00/0000 00:00:00');
+    $('.cep').mask('00000-000');
+    $('.phone').mask('0000-0000');
+    $('.phone_with_ddd').mask('(00) 0000-0000');
+    $('.phone_us').mask('(000) 000-0000');
+    $('.mixed').mask('AAA 000-S0S');
+    $('.cpf').mask('000.000.000-00', {reverse: true});
+    $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+    $('.money').mask('000.000.000.000.000,00', {reverse: true});
+    $('.money2').mask("#.##0,00", {reverse: true});
+    $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+      translation: {
+        'Z': {
+          pattern: /[0-9]/, optional: true
+        }
+      }
+    });
+    $('.ip_address').mask('099.099.099.099');
+    $('.percent').mask('##0,00%', {reverse: true});
+    $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+    $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('.fallback').mask("00r00r0000", {
+        translation: {
+          'r': {
+            pattern: /[\/]/,
+            fallback: '/'
+          },
+          placeholder: "__/__/____"
+        }
+      });
+    $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+  });
+</script>
+
+</body>
+</html>
